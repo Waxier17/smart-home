@@ -1,0 +1,152 @@
+/* Estilos globais */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(180deg, #28b1c9, #040370);
+  color: #1f1a1a;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+h1, h2 {
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #1f1a1a;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-top: 20px;
+}
+
+h2 {
+  font-size: 2em;
+  color: #1f1a1a;
+}
+
+/* Estilização dos cômodos */
+.comodos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+  justify-content: center;
+  align-items: center;
+  margin: 5%;
+}
+
+.casa h1 {
+  text-align: center;
+}
+
+.status {
+  margin-bottom: 10px;
+  display: block;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.status.on {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.status.off {
+  opacity: 0;
+  transform: scale(0.9);
+  pointer-events: none;
+}
+
+img {
+  margin: 0 auto 10px;
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
+}
+
+/* Botões */
+button {
+  display: block;
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: 2px solid #ffffff99;
+  border-radius: 5px;
+  margin: 10px auto 0;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+/* Seção de desenvolvimento */
+.developer {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 0.9em;
+  color: #ffffffaa;
+}
+
+.developer a {
+  color: #000000;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.developer a:hover {
+  color: #ffffff;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .comodos {
+    flex-direction: row;
+    gap: 1.5em;
+    margin: 5% 10%;
+  }
+}
+
+@media (max-width: 768px) {
+  button {
+    font-size: 0.9em;
+    padding: 6px 12px;
+  }
+
+  .developer {
+    font-size: 0.8em;
+  }
+}

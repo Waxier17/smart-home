@@ -1,0 +1,22 @@
+.cozinha{
+    padding: 3em;
+    background-color: rgb(96, 255, 255);
+    border-radius: 25px;
+    box-shadow: 5px 2px #0002;
+
+label {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    display: inline-block;
+}
+
+input {
+    padding: 10px 1px;
+    font-size: 1em;
+    border-radius: 15px;
+    border: 2px solid #ccc;
+    width: 60px;
+    text-align: center;
+}
+}
